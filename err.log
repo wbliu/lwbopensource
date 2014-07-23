@@ -1,0 +1,44 @@
+$ git push lwbopensource master
+	fatal: 'lwbopensource' does not appear to be a git repository
+	fatal: Could not read from remote repository.
+
+	Please make sure you have the correct access rights
+	and the repository exists.
+
+git remote -v
+git remote add lwbopensource git@heroku.com:lwbopensource.git
+
+
+
+$ git push lwbopensource master
+	The authenticity of host 'heroku.com (50.19.85.154)' can't be established.
+	RSA key fingerprint is 8b:48:5e:67:0e:c9:16:47:32:f2:87:0c:1f:c8:60:ad.
+	Are you sure you want to continue connecting (yes/no)? yes
+	Warning: Permanently added 'heroku.com,50.19.85.154' (RSA) to the list of known
+	hosts.
+	Permission denied (publickey).
+	fatal: Could not read from remote repository.
+
+	Please make sure you have the correct access rights
+	and the repository exists.
+
+git remote set-url lwbopensource git@github.com:wbliu/lwbopensource.git
+
+
+$ git push lwbopensource master
+	Warning: Permanently added the RSA host key for IP address '192.30.252.131' to t
+	he list of known hosts.
+	To git@github.com:wbliu/lwbopensource.git
+	 ! [rejected]        master -> master (non-fast-forward)
+	error: failed to push some refs to 'git@github.com:wbliu/lwbopensource.git'
+	hint: Updates were rejected because the tip of your current branch is behind
+	hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+	hint: before pushing again.
+	hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+git pull lwbopensource master
+
+
+
+
